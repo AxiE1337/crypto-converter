@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Converter from './pages/Converter'
+import CryptocurrencyPortfolio from './pages/CryptocurrencyPortfolio'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Converter />} />
+          <Route path='/assets' element={<CryptocurrencyPortfolio />} />
+          <Route path='*' element={<Navigate to='/' />} />
+        </Routes>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

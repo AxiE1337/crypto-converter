@@ -1,0 +1,64 @@
+.cryptoPortfolio {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .pieChart {
+    width: 400px;
+  }
+  .assets {
+    .coin {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+      border-bottom: 1px solid #180f4e;
+      .btns {
+        margin-left: auto;
+        border-radius: 10px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+  .navigateBtn {
+    margin-right: auto;
+    margin-left: 0.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cryptoPortfolio {
+    font-size: 0.7rem;
+    .pieChart {
+      width: 200px;
+    }
+    .assets {
+      .coin {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        border-bottom: 1px solid #180f4e;
+        .btns {
+          margin-left: auto;
+          border-radius: 10px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .navigateBtn {
+      margin-right: auto;
+      margin-left: 0.5em;
+    }
+  }
+}
